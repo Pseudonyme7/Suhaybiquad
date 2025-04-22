@@ -12,11 +12,11 @@ export default function Header() {
     const pathname = usePathname();
 
     const navLinks = [
-        { name: 'Accueil', href: '/' },
-        { name: 'Circuits', href: '/circuits' },
-        { name: 'Services', href: '/services' },
-        { name: 'À propos', href: '/about' },
-        { name: 'Contact', href: '/contact' },
+        { name: 'Accueil', href: '/', section: 'hero' },
+        { name: 'Circuits', href: '/#circuits', section: 'featuredTours' },
+        { name: 'Services', href: '/#services', section: 'whyUs' },
+        { name: 'Témoignages', href: '/#testimonials', section: 'testimonials' },
+        { name: 'Contact', href: '/contact', section: 'contact' },
     ];
 
     useEffect(() => {
@@ -45,11 +45,28 @@ export default function Header() {
         };
     }, [isMenuOpen]);
 
+    // Fonction pour gérer le défilement vers les sections
+    const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, section: string) => {
+        // Si on est sur la page d'accueil, on empêche la navigation par défaut
+        if (pathname === '/') {
+            e.preventDefault();
+
+            const targetElement = document.getElementById(section);
+            if (targetElement) {
+                // Défilement fluide vers la section
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
+    };
+
     return (
         <header
             className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-                    ? 'bg-white/90 dark:bg-accent/90 backdrop-blur-md shadow-lg py-3'
-                    : 'bg-transparent py-5'
+                ? 'bg-accent/95 backdrop-blur-md shadow-lg py-2 md:py-3'
+                : 'bg-transparent py-3 md:py-5'
                 }`}
         >
             <div className="container mx-auto px-4">
@@ -62,9 +79,9 @@ export default function Header() {
                             animate={{ opacity: 1 }}
                             transition={{ duration: 0.5 }}
                         >
-                            <div className="w-10 h-10 relative mr-3">
+                            <div className="w-16 h-16 md:w-28 md:h-28 relative mr-3">
                                 <Image
-                                    src="/logo.svg"
+                                    src="/logoQuad.png"
                                     alt="SuhaybiQuad Logo"
                                     fill
                                     className="object-contain"
@@ -72,8 +89,8 @@ export default function Header() {
                                 />
                             </div>
                             <div className={`font-bold text-xl ${isScrolled
-                                    ? 'text-primary dark:text-white'
-                                    : 'text-white'
+                                ? 'text-primary dark:text-white'
+                                : 'text-white'
                                 }`}>
                                 <span>SUHAYBI</span>
                                 <span className="text-secondary">QUAD</span>
@@ -87,9 +104,10 @@ export default function Header() {
                             <Link
                                 key={link.name}
                                 href={link.href}
+                                onClick={(e) => handleSmoothScroll(e, link.section)}
                                 className={`
                                     px-4 py-2 rounded-md font-medium transition-colors relative group
-                                    ${pathname === link.href
+                                    ${pathname === link.href || (pathname === '/' && link.href.startsWith('/#'))
                                         ? 'text-secondary'
                                         : `${isScrolled ? 'text-accent dark:text-gray-200' : 'text-white'} hover:text-secondary`
                                     }
@@ -159,7 +177,10 @@ export default function Header() {
                                 >
                                     <Link
                                         href={link.href}
-                                        className={`text-2xl font-semibold block py-2 ${pathname === link.href ? 'text-secondary' : 'text-white'
+                                        onClick={(e) => handleSmoothScroll(e, link.section)}
+                                        className={`text-2xl font-semibold block py-2 ${pathname === link.href || (pathname === '/' && link.href.startsWith('/#'))
+                                            ? 'text-secondary'
+                                            : 'text-white'
                                             }`}
                                     >
                                         {link.name}

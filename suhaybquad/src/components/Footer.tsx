@@ -50,7 +50,7 @@ export default function Footer() {
                     <div className="lg:col-span-1">
                         <div className="mb-6">
                             <h2 className="text-2xl font-bold mb-1">
-                                <span className="text-primary">Moroc</span>
+                                <span className="text-primary">Suhaybi</span>
                                 <span className="text-secondary">Quad</span>
                             </h2>
                             <p className="text-sm text-gray-400 italic">L'aventure à 4 roues !</p>
@@ -196,7 +196,7 @@ export default function Footer() {
 
                 <div className="mt-16 pt-8 border-t border-gray-800 text-center text-sm">
                     <div className="flex flex-col md:flex-row justify-between items-center">
-                        <p>© {new Date().getFullYear()} MorocQuad - La meilleure façon de dompter le désert sur 4 roues !</p>
+                        <p>© {new Date().getFullYear()} SuhaybiQuad - La meilleure façon de dompter le désert sur 4 roues !</p>
                         <p className="mt-4 md:mt-0 text-gray-500">* Aucun chameau n'a été dépassé dans la réalisation de ce site web 🐪</p>
                     </div>
                 </div>

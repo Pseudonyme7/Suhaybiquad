@@ -11,12 +11,12 @@ export default function Hero() {
 
     const backgroundDesertImages = [
         {
-            url: 'https://images.unsplash.com/photo-1597244841216-3b8894593bc9',
+            url: 'https://images5.alphacoders.com/108/1085132.jpg',
             alt: 'Dunes du désert marocain',
             position: 'center'
         },
         {
-            url: 'https://images.unsplash.com/photo-1488503674815-d6c13687ff65',
+            url: 'https://live.staticflickr.com/1588/24336739220_4e481ad8ba_h.jpg',
             alt: 'Paysage désertique avec montagnes',
             position: 'center'
         }
@@ -37,7 +37,8 @@ export default function Hero() {
     return (
         <div
             ref={heroRef}
-            className="relative min-h-screen flex items-center justify-center overflow-hidden"
+            id="hero"
+            className="relative min-h-screen flex items-center justify-center overflow-hidden pt-28 md:pt-32"
         >
             {/* Background images with subtle zoom effect */}
             <div className="absolute inset-0 z-0">
@@ -70,7 +71,7 @@ export default function Hero() {
             <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/70 z-10"></div>
 
             {/* Main hero content container */}
-            <div className="container z-20 relative flex flex-col-reverse lg:flex-row items-center justify-between py-20 gap-8">
+            <div className="container z-20 relative flex flex-col-reverse lg:flex-row items-center justify-between py-8 md:py-20 gap-8 px-4 mt-14 md:mt-0">
                 {/* Left content - text */}
                 <motion.div
                     className="w-full lg:w-1/2 text-white"
@@ -172,7 +173,7 @@ export default function Hero() {
                         animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : 20 }}
                         transition={{ duration: 0.6, delay: 1.2 }}
                     >
-                        <div className="text-2xl font-bold text-secondary">2023</div>
+                        <div className="text-2xl font-bold text-secondary">2025</div>
                         <div className="text-sm">Modèle premium</div>
                     </motion.div>
                 </motion.div>

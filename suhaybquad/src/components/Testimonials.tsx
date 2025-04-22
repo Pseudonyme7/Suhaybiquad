@@ -6,39 +6,35 @@ import Image from 'next/image';
 const testimonials = [
     {
         id: 1,
-        name: 'Sophie Dubois',
-        avatar: 'https://randomuser.me/api/portraits/women/12.jpg',
+        name: 'IshraQO',
         rating: 5,
-        text: 'Une expérience incroyable ! Notre guide Mohammed connaissait tous les meilleurs spots et a même fait des blagues plus drôles que mon mari (désolé chéri). Je n\'ai jamais vu autant de sable dans mes chaussures, mais ça valait chaque grain !',
-        location: 'Paris, France',
+        text: 'Une expérience incroyable ! Quand notre quad s\'est légèrement enlisé, Suhayb a dit "Ne vous inquiétez pas, ce n\'est pas du sable, c\'est juste le désert qui veut un câlin!',
+        location: 'Marseille, France',
         date: 'Avril 2023'
     },
     {
         id: 2,
-        name: 'Thomas Martin',
-        avatar: 'https://randomuser.me/api/portraits/men/32.jpg',
+        name: 'Jean-Michel',
         rating: 5,
-        text: 'Ma femme m\'a offert cette excursion pour mon anniversaire. J\'étais d\'abord sceptique, mais maintenant j\'en rêve toutes les nuits ! Le seul inconvénient ? Impossible de convaincre mon patron que faire du quad au Maroc devrait être considéré comme du télétravail.',
+        text: 'Le seul inconvénient ? Impossible de convaincre mon patron que faire du quad avec Suhayb au Maroc devrait être considéré comme du télétravail.',
         location: 'Lyon, France',
         date: 'Mai 2023'
     },
     {
         id: 3,
-        name: 'Claire Lefebvre',
-        avatar: 'https://randomuser.me/api/portraits/women/23.jpg',
-        rating: 4,
-        text: 'J\'ai pris des photos tellement incroyables que mes amis pensent qu\'elles sont générées par IA ! Le circuit dans les dunes était parfait, même si j\'ai dû expliquer trois fois à ma mère que non, je n\'ai pas rencontré Aladdin.',
-        location: 'Bruxelles, Belgique',
-        date: 'Juin 2023'
+        name: 'Hassen Chalgoumi',
+        rating: 2,
+        text: 'J\'aime li quad et li mareuk mais ji prifere la fronce quon meme je suis charles.',
+        location: 'VilleJuif, France',
+        date: 'Juin 2024'
     },
     {
         id: 4,
-        name: 'Jean-Philippe Moreau',
-        avatar: 'https://randomuser.me/api/portraits/men/62.jpg',
+        name: 'Donald Trump',
         rating: 5,
-        text: 'J\'ai fait du quad dans plusieurs pays, mais l\'expérience au Maroc est tout simplement incomparable ! Et le thé à la menthe servi en plein désert après la randonnée est probablement la meilleure récompense qu\'on puisse imaginer. 10/10 recommanderaient (et même mon mal de dos est d\'accord) !',
-        location: 'Marseille, France',
-        date: 'Février 2023'
+        text: 'China is a beautiful country and I love it',
+        location: 'Bruh, USA',
+        date: 'Février 2024'
     }
 ];
 
@@ -52,7 +48,7 @@ function Testimonials() {
     useEffect(() => {
         const interval = setInterval(() => {
             setActiveIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
-        }, 7000);
+        }, 13000);
 
         setIsVisible(true);
 
@@ -89,6 +85,7 @@ function Testimonials() {
     return (
         <section
             ref={testimonialsRef}
+            id="testimonials"
             className="section-padding bg-gradient-to-br from-accent/5 via-gray-100 to-primary/5 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 relative overflow-hidden"
         >
             {/* Decorative elements */}
@@ -124,15 +121,6 @@ function Testimonials() {
                                 >
                                     <div className="bg-white dark:bg-gray-800 p-8 md:p-10">
                                         <div className="flex flex-col md:flex-row md:items-start gap-6 mb-8">
-                                            <div className="relative w-24 h-24 rounded-2xl overflow-hidden shadow-lg mx-auto md:mx-0">
-                                                <Image
-                                                    src={testimonial.avatar}
-                                                    alt={testimonial.name}
-                                                    fill
-                                                    sizes="96px"
-                                                    className="object-cover"
-                                                />
-                                            </div>
                                             <div className="flex-1 text-center md:text-left">
                                                 <div className="flex flex-col md:flex-row md:items-center md:justify-between">
                                                     <div>
@@ -208,8 +196,8 @@ function Testimonials() {
                                 key={index}
                                 onClick={() => setActiveIndex(index)}
                                 className={`w-3 h-3 mx-1.5 rounded-full transition-all duration-300 ${index === activeIndex
-                                        ? 'bg-primary w-6'
-                                        : 'bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500'
+                                    ? 'bg-primary w-6'
+                                    : 'bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500'
                                     }`}
                                 aria-label={`Voir le témoignage ${index + 1}`}
                             />
@@ -229,7 +217,7 @@ function Testimonials() {
                             <h3 className="text-lg font-bold text-primary">Fait amusant</h3>
                         </div>
                         <p className="text-gray-700 dark:text-gray-300">
-                            87% de nos clients affirment que faire du quad au Maroc est plus excitant que de regarder leur série préférée !
+                            87% de nos clients affirment que faire du quad au Maroc est plus excitant que de manger des chips !
                         </p>
                     </div>
                 </div>

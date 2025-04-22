@@ -44,7 +44,7 @@ export default function WhyUs() {
     }, []);
 
     return (
-        <section className="section-padding py-20 bg-sand dark:bg-gray-900 relative overflow-hidden">
+        <section id="whyUs" className="section-padding py-20 bg-sand dark:bg-gray-900 relative overflow-hidden">
             {/* Decorative elements */}
             <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-white/10 to-transparent dark:from-black/10"></div>
             <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-white/10 to-transparent dark:from-black/10"></div>
@@ -54,7 +54,9 @@ export default function WhyUs() {
 
             <div className="container mx-auto px-4 relative z-10">
                 <div className={`text-center mb-20 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                    <span className="text-primary font-bold text-sm uppercase tracking-wider">Pourquoi nous choisir</span>
+                    <div className="mb-2">
+                        <span className="text-primary font-bold text-sm uppercase tracking-wider">Pourquoi nous choisir</span>
+                    </div>
                     <h2 className="text-4xl md:text-5xl font-bold mt-3 mb-6 relative inline-block">
                         <span className="relative z-10">Ce qui fait la différence</span>
                         <span className="absolute -bottom-3 left-0 w-full h-1 bg-secondary"></span>
@@ -108,7 +110,7 @@ export default function WhyUs() {
                     <div className="glass-effect inline-block p-6 rounded-2xl max-w-3xl mx-auto border border-white/10 shadow-xl">
                         <h3 className="text-2xl font-bold mb-4 text-primary">Notre secret</h3>
                         <p className="text-lg">
-                            Chaque membre de notre équipe doit pouvoir réaliser 3 blagues sur le désert, connaître 5 astuces pour enlever le sable de ses chaussures, et repérer un chameau à 2km de distance. C'est notre standard de qualité!
+                            Chaque membre de notre équipe doit pouvoir réaliser 3 blagues sur le désert, connaître 5 astuces pour enlever le sable de ses chaussures, repérer un chameau à 2km de distance et garder un sourire éclatant même après 8h dans les dunes (merci à notre chef dentiste pour les contrôles dentaires gratuits !). C'est notre standard de qualité!
                         </p>
                         <div className="mt-4 flex justify-center space-x-8">
                             <div className="flex flex-col items-center">
