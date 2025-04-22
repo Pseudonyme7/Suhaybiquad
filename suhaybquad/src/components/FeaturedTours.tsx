@@ -78,7 +78,7 @@ export default function FeaturedTours() {
                 >
                     <div className="absolute top-0 left-0 w-full h-full bg-[url('/pattern.svg')] opacity-10"></div>
                     <h3 className="text-2xl font-bold mb-2">🦷 OFFRE SPÉCIALE AVENTURIERS 🦷</h3>
-                    <p className="text-lg mb-3">Votre guide Suhayb est aussi dentiste de profession !</p>
+                    <p className="text-lg mb-3">Votre guide Sohaïb est aussi dentiste de profession !</p>
                     <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-10 mb-3">
                         <div className="bg-white/20 backdrop-blur-sm rounded-lg p-3 flex-1 max-w-xs">
                             <span className="font-bold block">1 DENT CASSÉE = 1 COURONNE OFFERTE</span>
@@ -168,9 +168,9 @@ export default function FeaturedTours() {
                                     </div>
                                     <p className="text-xs text-gray-700 dark:text-gray-300">
                                         {tour.id === 'desert-dunes'
-                                            ? 'Tombez sur du sable plutôt que chez un autre dentiste ! En cas de chute, Suhayb vérifie votre dentition gratuitement !'
+                                            ? 'Tombez sur du sable plutôt que chez un autre dentiste ! En cas de chute, Sohaïb vérifie votre dentition gratuitement !'
                                             : tour.id === 'atlas-mountains'
-                                                ? 'Le circuit le plus extrême ! Si vous perdez une dent dans l\'Atlas, Suhayb vous offre 20% sur un implant haut de gamme "Aussi solide que les roches de l\'Atlas" !'
+                                                ? 'Le circuit le plus extrême ! Si vous perdez une dent dans l\'Atlas, Sohaïb vous offre 20% sur un implant haut de gamme "Aussi solide que les roches de l\'Atlas" !'
                                                 : 'Combo exclusif : après les embruns marins, un détartrage offert pour retrouver votre sourire éclatant !'}
                                     </p>
                                 </div>

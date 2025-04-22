@@ -86,7 +86,7 @@ export default function Hero() {
                             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
                             transition={{ duration: 0.6, delay: 0.4 }}
                         >
-                            <span className="text-white">SUHAYBI</span>
+                            <span className="text-white">SOHAIBI</span>
                             <span className="text-secondary">QUAD</span>
                         </motion.h1>
 

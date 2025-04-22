@@ -92,7 +92,7 @@ export default function Header() {
                                 ? 'text-primary dark:text-white'
                                 : 'text-white'
                                 }`}>
-                                <span>SUHAYBI</span>
+                                <span>SOHAIBI</span>
                                 <span className="text-secondary">QUAD</span>
                             </div>
                         </motion.div>

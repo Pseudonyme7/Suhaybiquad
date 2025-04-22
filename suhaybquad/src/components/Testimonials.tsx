@@ -8,7 +8,7 @@ const testimonials = [
         id: 1,
         name: 'IshraQO',
         rating: 5,
-        text: 'Une expérience incroyable ! Quand notre quad s\'est légèrement enlisé, Suhayb a dit "Ne vous inquiétez pas, ce n\'est pas du sable, c\'est juste le désert qui veut un câlin!',
+        text: 'Une expérience incroyable ! Quand notre quad s\'est légèrement enlisé, Sohaïb a dit "Ne vous inquiétez pas, ce n\'est pas du sable, c\'est juste le désert qui veut un câlin!',
         location: 'Marseille, France',
         date: 'Avril 2023'
     },
@@ -16,7 +16,7 @@ const testimonials = [
         id: 2,
         name: 'Jean-Michel',
         rating: 5,
-        text: 'Le seul inconvénient ? Impossible de convaincre mon patron que faire du quad avec Suhayb au Maroc devrait être considéré comme du télétravail.',
+        text: 'Le seul inconvénient ? Impossible de convaincre mon patron que faire du quad avec Sohaïb au Maroc devrait être considéré comme du télétravail.',
         location: 'Lyon, France',
         date: 'Mai 2023'
     },
